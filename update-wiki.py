@@ -204,8 +204,10 @@ if 1:
         return ''.join(diff)
 
     # Show diff between old and proposed new content:
-    print(unified_diff(oldcontent, newcontent))
+    with open("python3.diff", "w") as f:
+        f.write(unified_diff(oldcontent, newcontent))
 
     # Show new content, for ease of pasting into the edit textarea:
-    print(newcontent)
+    with open("python3.txt", "w") as f:
+        f.write(newcontent)
 
