@@ -39,7 +39,7 @@ class PackageLine:
         for attrname in self.ATTRNAMES:
             field = getattr(self, attrname)
             if field == '':
-                field = ' '
+                field = ' TBD '
             else:
                 field = ' %s ' % field
             columns.append(field)
